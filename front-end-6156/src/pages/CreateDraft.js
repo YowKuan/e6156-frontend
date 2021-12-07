@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar/NavBar';
 
 const CreateDraft = () => (
   <div>
-    <NavBar></NavBar>
+    Create Draft
   </div>
 );
 
