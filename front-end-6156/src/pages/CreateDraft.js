@@ -2,16 +2,18 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Tab, Tabs} from 'react-bootstrap';
 import NavBar from '../components/NavBar/NavBar';
+import Roster from './Roster';
+import Rules from './Rules';
 
 const CreateDraft = () => (
   <div>
     <h1>Create Draft</h1>
     <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3">
       <Tab eventKey="rules" title="Rules">
-        rules
+        <Rules/>
       </Tab>
       <Tab eventKey="roster" title="Roster">
-        roster
+        <Roster/>
       </Tab>
       <Tab eventKey="scoring" title="Scoring">
         scoring
