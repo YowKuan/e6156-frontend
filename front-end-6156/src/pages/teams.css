@@ -1,24 +1,28 @@
 
 
-.roster {
+.team {
     max-width: 400px;
     margin: 0 auto;
     text-align: left;
 }
 
-.roster label {
+.team label {
     text-align:left;
     display: block;
 }
 
-.roster  h2 {
-    margin-top: 10px;
+.team  h2 {
     font-size: 30px;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
-.roster input, .roster textarea, .roster select {
+.team  h3 {
+    font-size: 20px;
+    color: black;
+}
+
+.team input, .team textarea, .team select {
     width: 100%;
     padding: 6px 10px;
     margin: 10px 0;
@@ -27,12 +31,23 @@
     display: block;
 }
 
-.roster button {
+.team button {
+    margin-bottom: 30px;
     background: #f1356d;
     color: #fff;
     border: 0;
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+
+.team.emailbutton  {
+    background: #1c10b9;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
 }
