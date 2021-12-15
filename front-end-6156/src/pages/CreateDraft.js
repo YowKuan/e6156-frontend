@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+import {useHistory, withRouter } from "react-router-dom";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Tab, Tabs} from 'react-bootstrap';
 import NavBar from '../components/NavBar/NavBar';
@@ -6,11 +8,16 @@ import Roster from './Roster';
 import Rules from './Rules';
 import Scoring from './Scoring';
 import Teams from './Teams'
+import axios from 'axios';
+import './roster.css'
 
 
 
 function CreateDraft () {
   const [check, setCheck] = useState(false)
+  const [redirect, setRedirect] = useState(false)
+  const baseURL = 'https://google.com'
+  const history = useHistory();
 
 
   function Check_teamnum() {
@@ -32,6 +39,28 @@ function CreateDraft () {
     Check_teamnum()
     // action on update of movies
   });
+  function submitForm(){
+    axios.post(baseURL, allform).then((response)=>{
+      if (response.status === 200){
+        setRedirect(true)
+      }
+        
+
+    })
+
+  }
+  useEffect(() => {
+    (() => {
+      if(redirect) {
+        history.push("/draft");
+      }
+    })()
+  }, [redirect])
+  // useEffect(() =>{
+  //   if (submission === true){
+      
+  //   }
+  // })
   
   const [allform, setAllform] = useState(
     {'roster':{
@@ -62,6 +91,9 @@ function CreateDraft () {
       }})
   console.log(allform)
 
+
+
+
   return (
       <div>
     <h1>Create Draft</h1>
@@ -69,7 +101,12 @@ function CreateDraft () {
     <Roster setAllform={setAllform}/>
     <Scoring setAllform={setAllform}/>
     <Teams check={check} setAllform={setAllform}/>
-    <Check_teamnum len_invited={allform.teams.length} set_invited={allform.rules.teamnum} />,
+    <Check_teamnum len_invited={allform.teams.length} set_invited={allform.rules.teamnum} />
+    <div className="roster">
+      <button  type="button" onClick={submitForm}>Submit Final Draft</button>
+    </div>
+
+    
     {/* <Tabs defaultActiveKey="rules" id="uncontrolled-tab-example" className="mb-3">
       <Tab eventKey="rules" title="Rules">
         <Rules/>
@@ -94,4 +131,4 @@ CreateDraft.propTypes = {};
 
 CreateDraft.defaultProps = {};
 
-export default CreateDraft;
+export default withRouter(CreateDraft);
