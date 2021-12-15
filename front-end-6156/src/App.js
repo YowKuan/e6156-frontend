@@ -5,6 +5,7 @@ import Draft from './pages/Draft'
 import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter } from 'react-router-dom';
 import {Switch, Route, Redirect} from "react-router-dom";
+import DraftTable from './pages/DraftTable';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Switch>
             <Route exact path='/create_draft' render={(props) => <CreateDraft/>} />
             <Route exact path='/draft' render={(props) => <Draft/>} />
+            <Route exact path='/draft_table' render={(props) => <DraftTable/>} />
             <Redirect from='/' to='/draft' />
           </Switch>
         </div>
