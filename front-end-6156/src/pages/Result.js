@@ -4,7 +4,7 @@ import {Table} from 'react-bootstrap';
 
 
 function Result() {
-    const [winner, setWinner] = useState('YowKuan')
+    const [winner, setWinner] = useState('Josh')
     return (
     
         <div>
