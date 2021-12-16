@@ -16,7 +16,7 @@ import './roster.css'
 function CreateDraft () {
   const [check, setCheck] = useState(false)
   const [redirect, setRedirect] = useState(false)
-  const baseURL = 'https://google.com'
+  const baseURL = 'http://35.171.161.15:8111/create_draft'
   const history = useHistory();
 
 
@@ -41,12 +41,15 @@ function CreateDraft () {
   });
   function submitForm(){
     axios.post(baseURL, allform).then((response)=>{
-      if (response.status === 200){
+      if (response.status === 201){
+        console.log(response.body)
         setRedirect(true)
-      }
-        
+      }   
 
-    })
+    }).catch(error => {
+      console.log(error)
+      return error
+    });
 
   }
   useEffect(() => {
