@@ -18,6 +18,7 @@ function CreateDraft () {
   const [redirect, setRedirect] = useState(false)
   const baseURL = 'http://35.171.161.15:8111/create_draft'
   const history = useHistory();
+  const [draft_id, setDraft_id] = useState('')
 
 
   function Check_teamnum() {
@@ -41,8 +42,9 @@ function CreateDraft () {
   });
   function submitForm(){
     axios.post(baseURL, allform).then((response)=>{
+      console.log(response)
       if (response.status === 201){
-        console.log(response.body)
+        setDraft_id(response.data.Link.draft)
         setRedirect(true)
       }   
 
@@ -55,7 +57,7 @@ function CreateDraft () {
   useEffect(() => {
     (() => {
       if(redirect) {
-        history.push("/draft");
+        history.push(draft_id);
       }
     })()
   }, [redirect])

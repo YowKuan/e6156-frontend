@@ -18,6 +18,7 @@ function App() {
             <Route exact path='/create_draft' render={(props) => <CreateDraft/>} />
             <Route exact path='/draft' render={(props) => <Draft/>} />
             <Route exact path='/draft_table' render={(props) => <DraftTable/>} />
+            <Route path="/draft/:id"></Route>
             <Redirect from='/' to='/draft' />
           </Switch>
         </div>
