@@ -12,7 +12,7 @@ import {useHistory, withRouter } from "react-router-dom";
 
 
 function App() {
-  const baseURL = "https://cu-fantasy.auth.us-east-1.amazoncognito.com/login?client_id=1c5m1dkc43amhvr10bjf1jrqsr&response_type=code&scope=aws.cognito.signin.user.admin+email+openid&redirect_uri=https://baseball.cu-fantasy.com/"
+  const baseURL = "https://8npd3qciag.execute-api.us-east-1.amazonaws.com/demo/api/login"
   Cookies.set('cookie_name', 'value')
   console.log(Cookies.get('cookie_name'))
 
