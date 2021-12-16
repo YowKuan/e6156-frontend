@@ -1,6 +1,7 @@
 import './App.css';
 import CreateDraft from './pages/CreateDraft'
 import Draft from './pages/Draft'
+import Result from './pages/Result'
 import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter } from 'react-router-dom';
 import {Switch, Route, Redirect} from "react-router-dom";
@@ -38,6 +39,7 @@ function App() {
             <Route exact path='/draft' render={(props) => <Draft/>} />
             <Route exact path='/draft_table' render={(props) => <DraftTable/>} />
             <Route path="/login"></Route>
+            <Route path='/result' render={(props) => <Result/>} />
 
             <Route path="/draft/:id"></Route>
             <Route path="/draft/:id" component={DraftTable}></Route>
