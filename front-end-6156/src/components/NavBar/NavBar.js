@@ -6,7 +6,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const NavBar = () => (
+
+const NavBar = ({loginFunc}) => (
+  
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -25,8 +27,8 @@ const NavBar = () => (
       </Nav>
       <Nav>
         <Nav.Link href="#deets">More deets</Nav.Link>
-        <Nav.Link eventKey={2} href="#memes">
-          Dank memes
+        <Nav.Link eventKey={2} onClick={loginFunc}>
+          Login
         </Nav.Link>
       </Nav>
     </Navbar.Collapse>
