@@ -4,6 +4,7 @@ phases:
   pre_build:
     commands:
       - cd front-end-6156
+      - npm config set registry https://registry.npmjs.com/
       - npm install
   build:
     commands:
