@@ -39,9 +39,7 @@ function App() {
             <Route exact path='/draft' render={(props) => <Draft/>} />
             <Route exact path='/draft_table' render={(props) => <DraftTable/>} />
             <Route path="/login"></Route>
-            <Route path='/result' render={(props) => <Result/>} />
-
-            <Route path="/draft/:id"></Route>
+            <Route path='/result/:id' render={(props) => <Result/>} />
             <Route path="/draft/:id" component={DraftTable}></Route>
             {/* <Route path="/draft/:id" render={(props) => <DraftTable/>}></Route> */}
             <Redirect from='/' to='/create_draft' />

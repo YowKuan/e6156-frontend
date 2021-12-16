@@ -223,7 +223,7 @@ class DraftTable extends Component {
               </div>
             </Card>
           </Row>
-          <Link to='/draft'>
+          <Link to={'/result/'.concat(id)}>
             <Button onClick={this.endGame()} style={{marginTop: '5px', marginBottom: '10px'}} size="lg">See Result</Button>
           </Link>
 
