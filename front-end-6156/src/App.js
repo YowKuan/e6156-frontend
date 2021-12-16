@@ -42,7 +42,7 @@ function App() {
             <Route path="/draft/:id"></Route>
             <Route path="/draft/:id" component={DraftTable}></Route>
             {/* <Route path="/draft/:id" render={(props) => <DraftTable/>}></Route> */}
-            <Redirect from='/' to='/draft' />
+            <Redirect from='/' to='/create_draft' />
           </Switch>
         </div>
           </BrowserRouter>

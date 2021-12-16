@@ -14,4 +14,4 @@ artifacts:
   files:
     - '**/*'
   discard-paths: no
-  base-directory: build
+  base-directory: front-end-6156/build
