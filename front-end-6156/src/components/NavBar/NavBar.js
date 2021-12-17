@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-const NavBar = ({loginFunc}) => (
+const NavBar = () => (
   
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
@@ -26,7 +26,7 @@ const NavBar = ({loginFunc}) => (
       </Nav>
       <Nav>
         <Nav.Link href="/player_list">Players List</Nav.Link>
-        <Nav.Link eventKey={2} onClick={loginFunc}>
+        <Nav.Link eventKey={2} href="https://cu-fantasy.auth.us-east-1.amazoncognito.com/login?client_id=1c5m1dkc43amhvr10bjf1jrqsr&response_type=code&scope=aws.cognito.signin.user.admin&redirect_uri=https://baseball.cu-fantasy.com/">
           Login
         </Nav.Link>
       </Nav>

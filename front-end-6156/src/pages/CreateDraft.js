@@ -75,8 +75,7 @@ function CreateDraft () {
       ss: '1',
       c: '1',
       of: '1',
-      sp: '1',
-      rp: '1',
+      p: '1',
       dh: '1',
       }, 
     'rules':{
