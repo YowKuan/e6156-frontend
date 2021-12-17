@@ -55,16 +55,14 @@ class PlayerList extends Component {
         <h1 style={{ marginTop: '15px' }}>Fantacy Result</h1>
         <Container fluid='md'>
           <Row>
-            <Card style={{ marginTop: '15px' }}>
-              <div style={{ height: 700, width: '100%', marginTop: '5px' }}>
-                <DataGrid
-                  rows={this.state.result}
-                  columns={column}
-                  pagination
-                  pageSize={10}
-                />
-              </div>
-            </Card>
+            <div style={{ height: 700, width: '100%', marginTop: '5px' }}>
+              <DataGrid
+                rows={this.state.result}
+                columns={column}
+                pagination
+                pageSize={10}
+              />
+            </div>
           </Row>
         </Container>
       </div>
