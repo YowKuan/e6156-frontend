@@ -9,7 +9,7 @@ function Result(props) {
     const [winner, setWinner] = useState('Josh')
 
 
-    result_request = axios.get(result_url).then((response)=>{
+    const result_request = axios.get(result_url).then((response)=>{
       console.log(response)
       console.log(response.status)
       if (response.status === 200){
