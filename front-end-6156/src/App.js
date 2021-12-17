@@ -17,23 +17,23 @@ function App() {
   Cookies.set('cookie_name', 'value')
   console.log(Cookies.get('cookie_name'))
 
-  function loginFunc(){
-    axios.get(baseURL).then((response)=>{
-      console.log(response)
-      if (response.status === 200){
-        console.log(response)
+  // function loginFunc(){
+  //   axios.get(baseURL).then((response)=>{
+  //     console.log(response)
+  //     if (response.status === 200){
+  //       console.log(response)
 
-      }   
-    }).catch(error => {
-      console.log(error)
-      return error
-    });
+  //     }   
+  //   }).catch(error => {
+  //     console.log(error)
+  //     return error
+  //   });
 
-  }
+  // }
   return (
     <div className="App">
       <BrowserRouter>
-        <NavBar loginFunc={loginFunc}></NavBar>
+        <NavBar></NavBar>
         <div className="App">
           <Switch>
             <Route exact path='/create_draft' render={(props) => <CreateDraft/>} />
