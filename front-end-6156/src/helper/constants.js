@@ -44,10 +44,11 @@ module.exports = {
     }
   },
   TYPES0: ['1B', '2B', '3B', 'SS', 'C', 'OF', 'RF', 'P', 'DH'],
-  TYPES: ['P', '1B', '2B', '3B', 'SS', 'C', 'OF', 'CF', 'LF', 'RF', 'DH'],
+  // TYPES: ['P', '1B', '2B', '3B', 'SS', 'C', 'OF', 'CF', 'LF', 'RF', 'DH'],
+  TYPES: ['P', '1B', '2B', '3B', 'SS', 'C', 'OF', 'CF', 'LF', 'RF'],
   ROSTER_MAP:{
     'C': 'c',
-    'DH': 'dh',
+    // 'DH': 'dh',
     'OF': 'of',
     'CF': 'of',
     'LF': 'of',
