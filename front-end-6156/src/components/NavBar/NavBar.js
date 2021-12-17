@@ -39,9 +39,9 @@ class NavBar extends Component {
           </Nav>
           <Nav>
             <Nav.Link href="/player_list">Players List</Nav.Link>
-            {/* <Nav.Link eventKey={2} href="https://cu-fantasy.auth.us-east-1.amazoncognito.com/login?client_id=1c5m1dkc43amhvr10bjf1jrqsr&response_type=code&scope=aws.cognito.signin.user.admin+email+openid&redirect_uri=https://8npd3qciag.execute-api.us-east-1.amazonaws.com/demo/api/main">
+            <Nav.Link eventKey={2} href="https://8npd3qciag.execute-api.us-east-1.amazonaws.com/demo/api/login">
               Login
-            </Nav.Link> */}
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
         </Container>
