@@ -58,6 +58,16 @@ module.exports = {
     'SS': 'ss',
     '3B': 'threeB',
     '2B': 'twoB',
+  },
+  RESULT_FIELDS: {
+    USER: 'User',
+    W: 'W',
+    ERA: 'ERA',
+    H: 'H',
+    HR: 'HR',
+    SV: 'SV',
+    AVG: 'AVG',
+    SCORE: 'score'
   }
 
 }

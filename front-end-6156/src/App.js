@@ -2,6 +2,7 @@ import './App.css';
 import CreateDraft from './pages/CreateDraft'
 import Draft from './pages/Draft'
 import Result from './pages/Result'
+import Result2 from './pages/Result2'
 import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter } from 'react-router-dom';
 import {Switch, Route, Redirect} from "react-router-dom";
@@ -44,7 +45,7 @@ function App() {
             <Route exact path='/player_list' render={(props) => <PlayerList/>} />
             <Route exact path='/draft_table' render={(props) => <DraftTable/>} />
             <Route path="/login"></Route>
-            <Route path='/result/:id' component={Result}></Route> 
+            <Route path='/result/:id' component={Result2}></Route> 
             <Route path="/draft/:id" component={DraftTable}></Route>
             {/* <Route path="/draft/:id" render={(props) => <DraftTable/>}></Route> */}
             <Redirect from='/' to='/main' />
