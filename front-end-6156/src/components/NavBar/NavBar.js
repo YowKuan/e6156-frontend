@@ -11,7 +11,7 @@ const NavBar = () => (
   
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand>CU Fantacy BaseBall</Navbar.Brand>
+    <Navbar.Brand href="/main">CU Fantacy BaseBall</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="me-auto">
