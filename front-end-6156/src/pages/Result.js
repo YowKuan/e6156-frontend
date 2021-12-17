@@ -1,10 +1,26 @@
 import React, { Component, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Table} from 'react-bootstrap';
+import axios from 'axios';
 
 
-function Result() {
+function Result(props) {
+    const result_url = 'http://35.171.161.15:8111/draft/'.concat(props.match.params.id).concat('/score')
     const [winner, setWinner] = useState('Josh')
+
+
+    result_request = axios.get(result_url).then((response)=>{
+      console.log(response)
+      console.log(response.status)
+      if (response.status === 200){
+        console.log(response)
+
+      }   
+    }).catch(error => {
+      console.log(error)
+      return error
+    });
+
     return (
     
         <div>
