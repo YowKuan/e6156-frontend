@@ -6,7 +6,7 @@ import {Tab, Tabs, Card, Button, Container, Col, Row, Image, Carousel} from 'rea
 class MainPage extends Component {
   render() {
     return (
-      <Carousel variant="dark">
+      <Carousel variant="dark" interval={3000}>
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -14,7 +14,7 @@ class MainPage extends Component {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>CU Fantacy BaseBAll</h3>
+            <h3>CU Fantacy BaseBall</h3>
             <p>COMSE6156_001_2021_3 - TOPICS IN SOFTWARE ENGINEERING - CLOUD COMPUTING</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -26,7 +26,7 @@ class MainPage extends Component {
           />
 
           <Carousel.Caption>
-            <h3>CU Fantacy BaseBAll</h3>
+            <h3>CU Fantacy BaseBall</h3>
             <p>COMSE6156_001_2021_3 - TOPICS IN SOFTWARE ENGINEERING - CLOUD COMPUTING</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -38,7 +38,7 @@ class MainPage extends Component {
           />
 
           <Carousel.Caption>
-            <h3>CU Fantacy BaseBAll</h3>
+            <h3>CU Fantacy BaseBall</h3>
             <p>COMSE6156_001_2021_3 - TOPICS IN SOFTWARE ENGINEERING - CLOUD COMPUTING</p>
           </Carousel.Caption>
         </Carousel.Item>
