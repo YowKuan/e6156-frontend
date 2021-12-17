@@ -10,6 +10,7 @@ import PlayerList from './pages/PlayerList';
 import Cookies from 'js-cookie'
 import axios from 'axios';
 import {useHistory, withRouter } from "react-router-dom";
+import MainPage from './pages/MainPage';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           <Switch>
             <Route exact path='/create_draft' render={(props) => <CreateDraft/>} />
             <Route exact path='/draft' render={(props) => <Draft/>} />
+            <Route exact path='/main' render={(props) => <MainPage/>} />
             <Route exact path='/player_list' render={(props) => <PlayerList/>} />
             <Route exact path='/draft_table' render={(props) => <DraftTable/>} />
             <Route path="/login"></Route>

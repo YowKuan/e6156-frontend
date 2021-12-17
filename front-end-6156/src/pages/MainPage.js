@@ -10,36 +10,36 @@ class MainPage extends Component {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
+            src="https://g.espncdn.com/s/flblm/share.png"
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>CU Fantacy BaseBAll</h3>
+            <p>COMSE6156_001_2021_3 - TOPICS IN SOFTWARE ENGINEERING - CLOUD COMPUTING</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
+            src="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/hgrvmpihpqjldxx4vfbx"
             alt="Second slide"
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>CU Fantacy BaseBAll</h3>
+            <p>COMSE6156_001_2021_3 - TOPICS IN SOFTWARE ENGINEERING - CLOUD COMPUTING</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
+            src="https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/q7x1fgga7u2kczgydr4u"
             alt="Third slide"
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <h3>CU Fantacy BaseBAll</h3>
+            <p>COMSE6156_001_2021_3 - TOPICS IN SOFTWARE ENGINEERING - CLOUD COMPUTING</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
