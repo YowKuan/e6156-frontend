@@ -21,7 +21,8 @@ class DraftTable extends Component {
       teams_member: [],
       teams_type_cnt: {},
       team_size: 0,
-      current_chosen_num: 0
+      current_chosen_num: 0,
+      disable_see_result: true
     };
     this.choosePlayer = this.choosePlayer.bind(this)
     this.setKey = this.setKey.bind(this)
@@ -76,7 +77,13 @@ class DraftTable extends Component {
         }
         gamer_idx += 1
       }
-
+      let disable_see_result = true
+      team_size *= gamers.length
+      console.log(current_chosen_num, team_size)
+      if (current_chosen_num === team_size){
+        disable_see_result = false
+        alert('Teams are ready! Click the See Result Button!')
+      }
       this.setState({
         gamers: gamers,
         gamers_map: gamers_map,
@@ -86,12 +93,11 @@ class DraftTable extends Component {
         teams_type_cnt: teams_type_cnt,
         draft_name: responses[1].data.rules.draftName,
         draft_info: draft_info,
-        team_size: team_size * gamers.length,
+        team_size: team_size,
         current_chosen_num: current_chosen_num,
+        disable_see_result: disable_see_result,
       });
-      if (this.state.current_chosen_num === this.state.team_size){
-        alert('Teams are ready! Click the See Result Button!')
-      }
+      
     }))
   };
 
@@ -181,6 +187,15 @@ class DraftTable extends Component {
   render() {
     const id = this.props.match.params.id
     console.log(this.state)
+    let roster = {}
+    if(this.state.draft_info['roster']){
+      roster = this.state.draft_info['roster']
+    }
+    let team_type_cnt = {}
+    if(this.state.teams_type_cnt[this.state.current_gamer_id]){
+      team_type_cnt = this.state.teams_type_cnt[this.state.current_gamer_id]
+    }
+    console.log(team_type_cnt)
     const column = [
       { field: PLAYERS.FIELDS.PLAYER_ID, headerName: PLAYERS.NAME.PLAYER_ID},
       { field: PLAYERS.FIELDS.NAME, headerName: PLAYERS.NAME.NAME, width: 150},
@@ -222,7 +237,7 @@ class DraftTable extends Component {
               </Card.Body>
               <Tabs defaultActiveKey='P' id="player-tab" className="mb-3 mt-2">
                 {TYPES.map((type) => (
-                  <Tab eventKey={type} title={type} key={type}>
+                  <Tab eventKey={type} title={type.concat(' (', team_type_cnt[ROSTER_MAP[type]], '/', roster[ROSTER_MAP[type]], ')')} key={type}>
                     <div style={{ height: 700, width: '100%', marginTop: '5px' }}>
                       <DataGrid
                         rows={this.state.players.filter(player => player[PLAYERS.FIELDS.POSITION] === type)}
@@ -236,9 +251,15 @@ class DraftTable extends Component {
               </Tabs>
             </Card>
           </Row>
-          <Link to={'/result/'.concat(id)}>
-            <Button style={{marginTop: '5px', marginBottom: '10px'}} size="lg">See Result</Button>
-          </Link>
+          { 
+            this.state.disable_see_result
+            ? <Link to={'/result/'.concat(id)} onClick={ (event) => event.preventDefault() }>
+                <Button style={{marginTop: '5px', marginBottom: '10px'}} disabled={this.state.disable_see_result} size="lg">See Result</Button>
+              </Link>
+            : <Link to={'/result/'.concat(id)}>
+                <Button style={{marginTop: '5px', marginBottom: '10px'}} disabled={this.state.disable_see_result} size="lg">See Result</Button>
+              </Link>
+          }
 
         </Container>
       </div>
