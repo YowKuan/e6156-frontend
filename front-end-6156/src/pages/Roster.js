@@ -17,7 +17,6 @@ function Roster(props) {
     c: '1',
     of: '1',
     p: '1',
-    dh: '1',
     })
 
 
@@ -65,12 +64,6 @@ function Roster(props) {
           </select>
           <label> P: </label>
           <select name='p' defaultValue={'1'}  onChange={handleChange}>
-            <option value="1" > 1 </option>
-            <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
-          </select>
-          <label> DH: </label>
-          <select name='dh' defaultValue={'1'}  onChange={handleChange}>
             <option value="1" > 1 </option>
             <option value="2"> 2 </option>
             <option value="3"> 3 </option>

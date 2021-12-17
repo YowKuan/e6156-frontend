@@ -76,7 +76,6 @@ function CreateDraft () {
       c: '1',
       of: '1',
       p: '1',
-      dh: '1',
       }, 
     'rules':{
       teamnum: '1',
