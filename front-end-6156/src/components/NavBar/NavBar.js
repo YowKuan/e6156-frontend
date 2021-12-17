@@ -11,12 +11,11 @@ const NavBar = () => (
   
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+    <Navbar.Brand>CU Fantacy BaseBall</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link href="#features">Features</Nav.Link>
-        <Nav.Link href="#pricing">Pricing</Nav.Link>
+        <Nav.Link href="/create_draft">Create Draft</Nav.Link>
         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
           <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -26,7 +25,7 @@ const NavBar = () => (
         </NavDropdown>
       </Nav>
       <Nav>
-        <Nav.Link href="#deets">More deets</Nav.Link>
+        <Nav.Link href="/player_list">Players List</Nav.Link>
         <Nav.Link eventKey={2} href="https://cu-fantasy.auth.us-east-1.amazoncognito.com/login?client_id=1c5m1dkc43amhvr10bjf1jrqsr&response_type=code&scope=aws.cognito.signin.user.admin&redirect_uri=https://baseball.cu-fantasy.com/">
           Login
         </Nav.Link>

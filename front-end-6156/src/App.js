@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import { BrowserRouter } from 'react-router-dom';
 import {Switch, Route, Redirect} from "react-router-dom";
 import DraftTable from './pages/DraftTable';
+import PlayerList from './pages/PlayerList';
 import Cookies from 'js-cookie'
 import axios from 'axios';
 import {useHistory, withRouter } from "react-router-dom";
@@ -38,11 +39,10 @@ function App() {
           <Switch>
             <Route exact path='/create_draft' render={(props) => <CreateDraft/>} />
             <Route exact path='/draft' render={(props) => <Draft/>} />
+            <Route exact path='/player_list' render={(props) => <PlayerList/>} />
             <Route exact path='/draft_table' render={(props) => <DraftTable/>} />
             <Route path="/login"></Route>
-            <Route path='/result' render={(props) => <Result/>} />
-
-            <Route path="/draft/:id"></Route>
+            <Route path='/result/:id' component={Result}></Route> 
             <Route path="/draft/:id" component={DraftTable}></Route>
             {/* <Route path="/draft/:id" render={(props) => <DraftTable/>}></Route> */}
             <Redirect from='/' to='/create_draft' />
